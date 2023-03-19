@@ -4,25 +4,43 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
+#app {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
 body {
     background-color: #0A192F;
     font-family: Arial, sans-serif;
     color: #8892B0;
     margin: 0;
-    min-height: 100vh;
+    padding: 0;
+    height: 100%; /* Change from min-height to height */
+    width: 100%;
+    overflow-y: auto; /* Change from scroll to auto */
 }
 
+
+
 .content-wrapper {
-    background-color: #0A192F;
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    min-height: calc(100vh - 60px);
-    color: #8892B0;
-    margin: 0px; /* Adjust the margin to avoid scrollbar */
+    padding-top: 60px; /* Add padding to account for the header height */
 }
+
+
 
 header {
     position: absolute;
@@ -40,6 +58,16 @@ main {
     width: 100%; /* Set the width of the text container */
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+
 #name {
     color: lightgrey;
 }
@@ -53,6 +81,7 @@ main {
     margin-bottom: -30px;
     line-height: 1;
     margin-left: 2px;
+    margin-top: 250px;
 }
 
 h1 {
@@ -110,8 +139,10 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
 }
 
@@ -136,6 +167,10 @@ a {
 
 .content-container {
     margin-top: 60px; /* Adjust this value based on the height of your header */
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 footer {

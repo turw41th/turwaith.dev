@@ -1,20 +1,17 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="header">
-    <img class="logo" src="path/to/your/logo.png" alt="Logo" />
+<div class="main">
+    <div class="header">
+        <img class="logo" src="path/to/your/logo.png" alt="Logo" />
 
-    <nav class="nav-links">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-    </nav>
-</div>
+        <nav class="nav-links">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </nav>
+    </div>
 
-<!-- Add this wrapper container -->
-<div class="content-wrapper">
-    <div class="main">
-        <div class="content px-4 content-container">
-            @Body
-        </div>
+    <div class="content px-4 content-container">
+        @Body
     </div>
 </div>
