@@ -13,10 +13,11 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     z-index: 1001;
+    min-height: 100%;
 }
 
 body {
@@ -25,11 +26,10 @@ body {
     color: #8892B0;
     margin: 0;
     padding: 0;
-    height: 100%; /* Change from min-height to height */
+    height: 100%;
     width: 100%;
-    overflow-y: auto; /* Change from scroll to auto */
+    overflow-y: auto;
 }
-
 
 
 .content-wrapper {
@@ -37,9 +37,8 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 60px; /* Add padding to account for the header height */
+    padding-top: 60px;
 }
-
 
 
 header {
@@ -54,15 +53,13 @@ header {
 }
 
 main {
-    text-align: left; /* Change text alignment to left */
-    width: 100%; /* Set the width of the text container */
+    text-align: left;
+    width: 100%;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     min-height: 100%;
     width: 100%;
     position: relative;
@@ -134,6 +131,7 @@ a {
 /* Sticky header styles */
 .header {
     background-color: #0A192F;
+    font-family: Consolas;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -156,13 +154,13 @@ a {
     }
 
         .header .nav-links a {
-            color: lightgrey;
+            color: turquoise;
             text-decoration: none;
             transition: color 0.3s;
         }
 
             .header .nav-links a:hover {
-                color: red;
+                color: turquoise;
             }
 
 .content-container {
@@ -178,6 +176,7 @@ footer {
     text-align: center;
     font-family: Consolas;
     font-size: 15px;
+    margin-bottom: 10px;
 }
 
 /* Scrollbar styles */
