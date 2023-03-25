@@ -200,20 +200,41 @@ footer {
 
 /* Loading spinner styles */
 .loader {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid turquoise;
-    border-radius: 50%;
+    display: inline-block;
     width: 60px;
     height: 60px;
-    animation: spin 2s linear infinite;
+    border: 6px solid rgba(255, 255, 255, 0.25);
+    border-top-color: turquoise;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
     0% {
-        transform: rotate(0);
+        transform: rotate(0deg);
     }
 
     100% {
         transform: rotate(360deg);
     }
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: turquoise;
+    background-color: transparent;
+    border: 2px solid turquoise;
+    border-radius: 10px; /* Adjust this value to control the curvature of the corners */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+    .button:hover {
+        background-color: turquoise;
+        color: #0A192F;
+    }
