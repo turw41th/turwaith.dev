@@ -8,6 +8,7 @@ html {
     height: 100%;
 }
 
+
 #app {
     top: 0;
     left: 0;
@@ -66,6 +67,7 @@ main {
 }
 
 #name {
+    font-size: 65px;
     color: lightgrey;
 }
 
@@ -82,7 +84,6 @@ main {
 }
 
 h1 {
-    font-size: 65px;
     margin-top: 10px;
 }
 
@@ -98,11 +99,11 @@ a {
 }
 
 /* Underline animation on hover */
-    a:hover {
+    nav a:hover {
         color: turquoise;
     }
 
-        a:hover::before {
+        nav a:hover::before {
             content: '';
             position: absolute;
             width: 100%;
@@ -115,7 +116,7 @@ a {
             transition: all 0.3s ease-in-out;
         }
 
-    a::before {
+    nav a::before {
         content: '';
         position: absolute;
         width: 100%;
@@ -237,4 +238,49 @@ footer {
     .button:hover {
         background-color: turquoise;
         color: #0A192F;
+    }
+
+
+.subtitle {
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: lightgrey;
+}
+
+
+
+/* Project boxes */
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.project-box {
+    flex: 1 0 45%; 
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    padding: 20px;
+    box-sizing: border-box; 
+    display: block; 
+    text-decoration: none; /* Remove the underline */
+    color: inherit; 
+    transition: border-color 0.3s ease; /* Animation on hover */
+}
+
+    .project-box:hover {
+        border-color: turquoise;
+    }
+
+    .project-box h3 {
+        margin-top: 0;
+        color: lightgray;
+    }
+
+    .project-box p {
+        margin-bottom: 0;
+        color: #8892B0;
     }
