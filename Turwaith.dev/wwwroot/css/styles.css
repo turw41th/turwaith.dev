@@ -290,3 +290,8 @@ footer {
         margin-bottom: 0;
         color: #8892B0;
     }
+
+#blogpagetitle {
+    top: 0;
+    margin-top: 0;
+}
