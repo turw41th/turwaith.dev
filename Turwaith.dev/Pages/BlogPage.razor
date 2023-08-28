@@ -1,7 +1,13 @@
 ﻿@page "/blog"
+@inject NavigationManager NavManager
 
 <h2 id="blogpagetitle">BlogPage</h2>
 
-@code {
+<p>Redirecting to Blog Page</p>
 
+@code {
+    protected override void OnInitialized()
+    {
+        NavManager.NavigateTo("https://turwaithsthoughts.blogspot.com");
+    }
 }
